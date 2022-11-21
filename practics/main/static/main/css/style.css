@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    max-width: 1350px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+aside {
+    background-color: #181818;
+    width: 30%;
+    height: 85vh;
+    color: #ffffff;
+    padding: 10px;
+    border-right: 5px solid #4d4d4d;
+}
+
+aside li {
+    list-style: none;
+    margin-left: 1rem;
+    transition: all 0.3s ease;
+}
+
+aside li:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+
+aside a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+aside a:hover {
+    color: orangered;
+    font-size: 20px;
+    text-decoration: none;
+    transform: scale(1.05);
+}
+
+
+
+main {
+    width: 70%;
+    background-color: antiquewhite;
+}
+
+main .hero {
+
+}
+
+header {
+    color: aliceblue;
+}
+
+footer {
+    color: aliceblue;
+}
+
+.fa-house {
+    margin-right: 3px;
+}
+
+form {
+    margin-left: 32%;
+    width: 500px;
+    margin-top: 50px;
+}

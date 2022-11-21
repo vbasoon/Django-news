@@ -1,0 +1,17 @@
+{% extends 'main/base.html'%}
+
+{% block title%}{{title}}{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <h1>{{title}}</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, dolore fugiat incidunt iure laudantium numquam perspiciatis voluptatibus? Atque beatae dolorum eius exercitationem minima nemo neque, obcaecati odio porro quaerat qui quia repellendus sunt suscipit temporibus vel voluptas voluptatibus. Blanditiis doloremque explicabo, facilis itaque laboriosam maxime non porro quam reiciendis veritatis.</p>
+    {% for val in value%}
+    <p>{{val}}</p>
+
+    {% endfor %}
+    <br>
+    <button type="button" class="btn btn-outline-info btn-lg">Info</button>
+</section>
+
+{% endblock %}

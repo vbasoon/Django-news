@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 from django.utils import timezone
 
 
@@ -18,3 +19,18 @@ class Articles(models.Model):
     class Meta:
         verbose_name = 'Article'
         verbose_name_plural = 'Articles'
+
+
+class Category(models.Model):
+    name = models.CharField(max_length=100, db_index=True, verbose_name="Категорії")
+    slug = models.SlugField(max_length=255, unique=True, db_index=True, verbose_name="URL")
+
+    def __str__(self):
+        return self.name
+
+    def get_absolute_url(self):
+        return reverse('categories', kwargs={'slug': self.slug})
+
+    class Meta:
+        verbose_name = "Category"
+        verbose_name_plural = "Categories"

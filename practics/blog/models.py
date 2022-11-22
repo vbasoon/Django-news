@@ -1,5 +1,5 @@
 from django.db import models
-from datetime import datetime, date
+from django.utils import timezone
 
 
 # Create your models here.
@@ -7,7 +7,7 @@ class Articles(models.Model):
     title = models.CharField('Title', max_length=50, default="Title")
     preview_text = models.CharField('Preview', max_length=250, default="Title")
     full_text = models.TextField('Text')
-    date = models.DateTimeField('Data', auto_now_add=False, auto_now=False, blank=True)
+    date = models.DateTimeField('Data', default=timezone.now, blank=True)
 
     def __str__(self):
         return self.title
